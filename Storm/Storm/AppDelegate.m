@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "City.h"
+#import "ForecastData.h"
+#import "WeatherData.h"
 
 @interface AppDelegate ()
 
@@ -14,10 +17,43 @@
 
 @implementation AppDelegate
 
+- (NSArray *)createRandomForecast
+{
+    NSMutableArray<ForecastData *> *forecastArray = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < 7; i++) {
+        ForecastData *forecast = [[ForecastData alloc] init];
+        forecast.maxDegree = arc4random() % 100;
+        forecast.minDegree = arc4random() % 100;
+        forecast.chancesOfRain = arc4random() % 100;
+        forecast.iconName = @"01d";
+        [forecastArray addObject:forecast];
+    }
+    return forecastArray;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // creating the city data
+    City *city = [[City alloc] initWithCityId:@"168940" andCityName:@"Menlo Park"];
+    city.latitude = 37.45;
+    city.longitude = -122.18;
+    
+    WeatherData *weatherData = [[WeatherData alloc] init];
+    weatherData.temperature = 15;
+    weatherData.humidity = 69;
+    weatherData.windAngle = 347;
+    weatherData.windSpeed = 1.86;
+    weatherData.shortCondition = @"Clear";
+    weatherData.longCondition = @"Sky is Clear";
+    weatherData.iconName = @"01d";
+    
+    city.weatherData = weatherData;
+    city.forecastData = [self createRandomForecast];
+    
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[UIViewController alloc] init];
     [_window makeKeyAndVisible];
     return YES;
 }
