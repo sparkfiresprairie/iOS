@@ -15,6 +15,15 @@
 		E0339BB51F0A18E700B0DEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0339BB31F0A18E700B0DEAA /* LaunchScreen.storyboard */; };
 		E0339BC01F0A18E700B0DEAA /* StormTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0339BBF1F0A18E700B0DEAA /* StormTests.m */; };
 		E0339BCB1F0A18E700B0DEAA /* StormUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0339BCA1F0A18E700B0DEAA /* StormUITests.m */; };
+		E0A48A281F0A34C200DEE3A9 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A271F0A34C200DEE3A9 /* City.m */; };
+		E0A48A291F0A34C200DEE3A9 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A271F0A34C200DEE3A9 /* City.m */; };
+		E0A48A2A1F0A34C200DEE3A9 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A271F0A34C200DEE3A9 /* City.m */; };
+		E0A48A2D1F0A380700DEE3A9 /* WeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A2C1F0A380700DEE3A9 /* WeatherData.m */; };
+		E0A48A2E1F0A380700DEE3A9 /* WeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A2C1F0A380700DEE3A9 /* WeatherData.m */; };
+		E0A48A2F1F0A380700DEE3A9 /* WeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A2C1F0A380700DEE3A9 /* WeatherData.m */; };
+		E0A48A321F0A390100DEE3A9 /* ForecastData.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A311F0A390100DEE3A9 /* ForecastData.m */; };
+		E0A48A331F0A390100DEE3A9 /* ForecastData.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A311F0A390100DEE3A9 /* ForecastData.m */; };
+		E0A48A341F0A390100DEE3A9 /* ForecastData.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A311F0A390100DEE3A9 /* ForecastData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,12 @@
 		E0339BC61F0A18E700B0DEAA /* StormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0339BCA1F0A18E700B0DEAA /* StormUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StormUITests.m; sourceTree = "<group>"; };
 		E0339BCC1F0A18E700B0DEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0A48A261F0A34C200DEE3A9 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		E0A48A271F0A34C200DEE3A9 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		E0A48A2B1F0A380700DEE3A9 /* WeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherData.h; sourceTree = "<group>"; };
+		E0A48A2C1F0A380700DEE3A9 /* WeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherData.m; sourceTree = "<group>"; };
+		E0A48A301F0A390100DEE3A9 /* ForecastData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastData.h; sourceTree = "<group>"; };
+		E0A48A311F0A390100DEE3A9 /* ForecastData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +116,9 @@
 		E0339BA11F0A18E700B0DEAA /* Storm */ = {
 			isa = PBXGroup;
 			children = (
+				E0A48A251F0A349800DEE3A9 /* Controller */,
+				E0A48A241F0A348E00DEE3A9 /* View */,
+				E0A48A231F0A347D00DEE3A9 /* Model */,
 				E0339BA51F0A18E700B0DEAA /* AppDelegate.h */,
 				E0339BA61F0A18E700B0DEAA /* AppDelegate.m */,
 				E0339BA81F0A18E700B0DEAA /* ViewController.h */,
@@ -138,6 +156,33 @@
 				E0339BCC1F0A18E700B0DEAA /* Info.plist */,
 			);
 			path = StormUITests;
+			sourceTree = "<group>";
+		};
+		E0A48A231F0A347D00DEE3A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0A48A261F0A34C200DEE3A9 /* City.h */,
+				E0A48A271F0A34C200DEE3A9 /* City.m */,
+				E0A48A2B1F0A380700DEE3A9 /* WeatherData.h */,
+				E0A48A2C1F0A380700DEE3A9 /* WeatherData.m */,
+				E0A48A301F0A390100DEE3A9 /* ForecastData.h */,
+				E0A48A311F0A390100DEE3A9 /* ForecastData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E0A48A241F0A348E00DEE3A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E0A48A251F0A349800DEE3A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A48A321F0A390100DEE3A9 /* ForecastData.m in Sources */,
+				E0A48A281F0A34C200DEE3A9 /* City.m in Sources */,
 				E0339BAA1F0A18E700B0DEAA /* ViewController.m in Sources */,
 				E0339BA71F0A18E700B0DEAA /* AppDelegate.m in Sources */,
 				E0339BA41F0A18E700B0DEAA /* main.m in Sources */,
+				E0A48A2D1F0A380700DEE3A9 /* WeatherData.m in Sources */,
 				E0339BB01F0A18E700B0DEAA /* Storm.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A48A291F0A34C200DEE3A9 /* City.m in Sources */,
+				E0A48A2E1F0A380700DEE3A9 /* WeatherData.m in Sources */,
+				E0A48A331F0A390100DEE3A9 /* ForecastData.m in Sources */,
 				E0339BC01F0A18E700B0DEAA /* StormTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A48A2A1F0A34C200DEE3A9 /* City.m in Sources */,
+				E0A48A2F1F0A380700DEE3A9 /* WeatherData.m in Sources */,
+				E0A48A341F0A390100DEE3A9 /* ForecastData.m in Sources */,
 				E0339BCB1F0A18E700B0DEAA /* StormUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +545,7 @@
 				E0339BD11F0A18E700B0DEAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0339BD21F0A18E700B0DEAA /* Build configuration list for PBXNativeTarget "StormTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +554,7 @@
 				E0339BD41F0A18E700B0DEAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0339BD51F0A18E700B0DEAA /* Build configuration list for PBXNativeTarget "StormUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +563,7 @@
 				E0339BD71F0A18E700B0DEAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
