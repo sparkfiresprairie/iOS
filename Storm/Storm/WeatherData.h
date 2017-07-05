@@ -12,9 +12,12 @@
 @interface WeatherData : NSObject
 
 @property (nonatomic) NSInteger temperature;
+@property (nonatomic) NSInteger maxDegree;
+@property (nonatomic) NSInteger minDegree;
 @property (nonatomic) NSInteger humidity;
 @property (nonatomic) CGFloat windSpeed;
 @property (nonatomic) NSInteger windAngle;
+@property (nonatomic) CGFloat pressure;
 @property (nonatomic, copy) NSString *shortCondition;
 @property (nonatomic, copy) NSString *longCondition;
 @property (nonatomic, copy) NSString *iconName;

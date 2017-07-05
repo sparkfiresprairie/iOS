@@ -14,5 +14,6 @@
 @property (nonatomic) NSInteger minDegree;
 @property (nonatomic) NSInteger chancesOfRain;
 @property (nonatomic, copy) NSString *iconName;
+@property (nonatomic, strong) NSDate *date;
 
 @end

@@ -17,7 +17,7 @@
 @property (nonatomic, copy) NSString *cityName;
 @property (nonatomic) CGFloat longitude;
 @property (nonatomic) CGFloat latitude;
-@property (nonatomic, copy) WeatherData *weatherData;
+@property (nonatomic, strong) WeatherData *weatherData;
 @property (nonatomic, copy) NSArray *forecastData;
 
 - (instancetype)initWithCityId:(NSString *)cityId andCityName:(NSString *)cityName;

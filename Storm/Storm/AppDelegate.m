@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "City.h"
+#import "CityView.h"
 #import "ForecastData.h"
 #import "WeatherData.h"
 
@@ -22,6 +23,7 @@
     NSMutableArray<ForecastData *> *forecastArray = [[NSMutableArray alloc] init];
     for (NSInteger i = 0; i < 7; i++) {
         ForecastData *forecast = [[ForecastData alloc] init];
+        forecast.date = [NSDate dateWithTimeIntervalSince1970:arc4random() % 14000000];
         forecast.maxDegree = arc4random() % 100;
         forecast.minDegree = arc4random() % 100;
         forecast.chancesOfRain = arc4random() % 100;
@@ -40,6 +42,8 @@
     
     WeatherData *weatherData = [[WeatherData alloc] init];
     weatherData.temperature = 15;
+    weatherData.maxDegree = 20;
+    weatherData.minDegree = 8;
     weatherData.humidity = 69;
     weatherData.windAngle = 347;
     weatherData.windSpeed = 1.86;
@@ -50,9 +54,12 @@
     city.weatherData = weatherData;
     city.forecastData = [self createRandomForecast];
     
+    // Creating the city view
+    CityView *cityView = [[CityView alloc] initWithCity:city];
+    cityView.frame = _window.frame;
+    [_window addSubview:cityView];
+    
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[UIViewController alloc] init];
     [_window makeKeyAndVisible];
     return YES;
