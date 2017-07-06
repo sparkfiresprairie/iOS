@@ -57,8 +57,8 @@
     city.forecastData = [self createRandomForecast];
     
     // Override point for customization after application launch.
-    CityViewController *cityViewController = [[CityViewController alloc] initWithCity:city];
-    _window.rootViewController = cityViewController;
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+    _window.rootViewController = searchViewController;
     [_window makeKeyAndVisible];
     return YES;
 }

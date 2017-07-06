@@ -10,25 +10,37 @@
 
 const static CGFloat kPadding = 20;
 
-@interface SearchViewController () <UITextFieldDelegate>
+@interface SearchViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @end
 
 @implementation SearchViewController
 {
-    UITextField *_textField;
+    UITableView *_tableView;
+    UISearchBar *_searchBar;
+    NSArray<NSString *> *_listOfCities;
+    NSArray<NSString *> *_filteredListOfCities;
 }
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _textField = [[UITextField alloc] init];
-        _textField.delegate = self;
-        _textField.borderStyle = UITextBorderStyleRoundedRect;
-        _textField.backgroundColor = [UIColor whiteColor];
-        _textField.placeholder = @"Click me";
-        _textField.returnKeyType = UIReturnKeySearch;
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
+        _searchBar.placeholder = @"Search";
+        _searchBar.barTintColor = [UIColor blackColor];
+        _searchBar.delegate = self;
+        
+        _tableView = [[UITableView alloc] init];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableHeaderView = _searchBar;
+        _tableView.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:_tableView];
+        
+        _listOfCities = @[@"Menlo Park", @"Cupertino", @"Palo Alto", @"San Francisco", @"Mountain View", @"Redwood City",
+                          @"Sunnyvale", @"Daly City", @"San Jose", @"Santa Clara", @"Foster City", @"San Mateo"];
+        _filteredListOfCities = _listOfCities;
     }
     return self;
 }
@@ -37,24 +49,54 @@ const static CGFloat kPadding = 20;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:_textField];
 }
 
 - (void)viewWillLayoutSubviews
 {
-    _textField.frame = CGRectMake(kPadding, kPadding, self.view.bounds.size.width - 2 * kPadding, 50);
+    _tableView.frame = CGRectMake(0, self.topLayoutGuide.length, self.view.bounds.size.width, self.view.bounds.size.height - self.topLayoutGuide.length);
 }
 
-#pragma mark - UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
-    if ([textField.text isEqualToString:@""]) {
-        return NO;
-    }
-    [textField resignFirstResponder];
-    return YES;
+    return UIStatusBarStyleLightContent;
 }
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _filteredListOfCities.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell.backgroundColor = [UIColor blackColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
+    }
+
+    cell.textLabel.text = _filteredListOfCities[indexPath.row];
+    return cell;
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (searchText.length == 0) {
+        _filteredListOfCities = _listOfCities;
+    } else {
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSString *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject rangeOfString:searchText options:NSCaseInsensitiveSearch].length != 0;
+        }];
+        _filteredListOfCities = [_listOfCities filteredArrayUsingPredicate:predicate];
+    }
+    [_tableView reloadData];
+}
+
 
 /*
 #pragma mark - Navigation
