@@ -11,6 +11,7 @@
 #import "CityView.h"
 #import "CityViewController.h"
 #import "ForecastData.h"
+#import "SearchViewController.h"
 #import "WeatherData.h"
 
 @interface AppDelegate ()
@@ -56,8 +57,8 @@
     city.forecastData = [self createRandomForecast];
     
     // Override point for customization after application launch.
-    CityViewController *cityViewController = [[CityViewController alloc] initWithCity:city];
-    self.window.rootViewController = cityViewController;
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+    self.window.rootViewController = searchViewController;
     [_window makeKeyAndVisible];
     return YES;
 }

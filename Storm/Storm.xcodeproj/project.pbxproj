@@ -41,6 +41,9 @@
 		E0A48A4F1F0E005C00DEE3A9 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */; };
 		E0A48A501F0E005C00DEE3A9 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */; };
 		E0A48A511F0E005C00DEE3A9 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */; };
+		E0A48A541F0E099400DEE3A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A531F0E099400DEE3A9 /* SearchViewController.m */; };
+		E0A48A551F0E099400DEE3A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A531F0E099400DEE3A9 /* SearchViewController.m */; };
+		E0A48A561F0E099400DEE3A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A531F0E099400DEE3A9 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,8 @@
 		E0A48A491F0CC3B600DEE3A9 /* 01d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01d.png; sourceTree = "<group>"; };
 		E0A48A4D1F0E005C00DEE3A9 /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
 		E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		E0A48A521F0E099400DEE3A9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		E0A48A531F0E099400DEE3A9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +221,8 @@
 			children = (
 				E0A48A4D1F0E005C00DEE3A9 /* CityViewController.h */,
 				E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */,
+				E0A48A521F0E099400DEE3A9 /* SearchViewController.h */,
+				E0A48A531F0E099400DEE3A9 /* SearchViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -365,6 +372,7 @@
 				E0339BA41F0A18E700B0DEAA /* main.m in Sources */,
 				E0A48A2D1F0A380700DEE3A9 /* WeatherData.m in Sources */,
 				E0339BB01F0A18E700B0DEAA /* Storm.xcdatamodeld in Sources */,
+				E0A48A541F0E099400DEE3A9 /* SearchViewController.m in Sources */,
 				E0A48A411F0C056F00DEE3A9 /* ForecastView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +383,7 @@
 			files = (
 				E0A48A291F0A34C200DEE3A9 /* City.m in Sources */,
 				E0A48A3D1F0C055100DEE3A9 /* WeatherDataView.m in Sources */,
+				E0A48A551F0E099400DEE3A9 /* SearchViewController.m in Sources */,
 				E0A48A381F0C053800DEE3A9 /* CityView.m in Sources */,
 				E0A48A2E1F0A380700DEE3A9 /* WeatherData.m in Sources */,
 				E0A48A471F0C058700DEE3A9 /* ForecastSingleDayView.m in Sources */,
@@ -391,6 +400,7 @@
 			files = (
 				E0A48A2A1F0A34C200DEE3A9 /* City.m in Sources */,
 				E0A48A3E1F0C055100DEE3A9 /* WeatherDataView.m in Sources */,
+				E0A48A561F0E099400DEE3A9 /* SearchViewController.m in Sources */,
 				E0A48A391F0C053800DEE3A9 /* CityView.m in Sources */,
 				E0A48A2F1F0A380700DEE3A9 /* WeatherData.m in Sources */,
 				E0A48A481F0C058700DEE3A9 /* ForecastSingleDayView.m in Sources */,
