@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E0339BA41F0A18E700B0DEAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0339BA31F0A18E700B0DEAA /* main.m */; };
 		E0339BA71F0A18E700B0DEAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0339BA61F0A18E700B0DEAA /* AppDelegate.m */; };
-		E0339BAA1F0A18E700B0DEAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0339BA91F0A18E700B0DEAA /* ViewController.m */; };
 		E0339BB01F0A18E700B0DEAA /* Storm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0339BAE1F0A18E700B0DEAA /* Storm.xcdatamodeld */; };
 		E0339BB21F0A18E700B0DEAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0339BB11F0A18E700B0DEAA /* Assets.xcassets */; };
 		E0339BB51F0A18E700B0DEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0339BB31F0A18E700B0DEAA /* LaunchScreen.storyboard */; };
@@ -39,6 +38,9 @@
 		E0A48A4A1F0CC3B600DEE3A9 /* 01d.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A48A491F0CC3B600DEE3A9 /* 01d.png */; };
 		E0A48A4B1F0CC3B600DEE3A9 /* 01d.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A48A491F0CC3B600DEE3A9 /* 01d.png */; };
 		E0A48A4C1F0CC3B600DEE3A9 /* 01d.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A48A491F0CC3B600DEE3A9 /* 01d.png */; };
+		E0A48A4F1F0E005C00DEE3A9 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */; };
+		E0A48A501F0E005C00DEE3A9 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */; };
+		E0A48A511F0E005C00DEE3A9 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +65,6 @@
 		E0339BA31F0A18E700B0DEAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0339BA51F0A18E700B0DEAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E0339BA61F0A18E700B0DEAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E0339BA81F0A18E700B0DEAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E0339BA91F0A18E700B0DEAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E0339BAF1F0A18E700B0DEAA /* Storm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storm.xcdatamodel; sourceTree = "<group>"; };
 		E0339BB11F0A18E700B0DEAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0339BB41F0A18E700B0DEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +90,8 @@
 		E0A48A441F0C058700DEE3A9 /* ForecastSingleDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastSingleDayView.h; sourceTree = "<group>"; };
 		E0A48A451F0C058700DEE3A9 /* ForecastSingleDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastSingleDayView.m; sourceTree = "<group>"; };
 		E0A48A491F0CC3B600DEE3A9 /* 01d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01d.png; sourceTree = "<group>"; };
+		E0A48A4D1F0E005C00DEE3A9 /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +148,6 @@
 				E0A48A231F0A347D00DEE3A9 /* Model */,
 				E0339BA51F0A18E700B0DEAA /* AppDelegate.h */,
 				E0339BA61F0A18E700B0DEAA /* AppDelegate.m */,
-				E0339BA81F0A18E700B0DEAA /* ViewController.h */,
-				E0339BA91F0A18E700B0DEAA /* ViewController.m */,
 				E0339BB11F0A18E700B0DEAA /* Assets.xcassets */,
 				E0339BB31F0A18E700B0DEAA /* LaunchScreen.storyboard */,
 				E0339BB61F0A18E700B0DEAA /* Info.plist */,
@@ -214,6 +214,8 @@
 		E0A48A251F0A349800DEE3A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E0A48A4D1F0E005C00DEE3A9 /* CityViewController.h */,
+				E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -356,9 +358,9 @@
 				E0A48A461F0C058700DEE3A9 /* ForecastSingleDayView.m in Sources */,
 				E0A48A321F0A390100DEE3A9 /* ForecastData.m in Sources */,
 				E0A48A3C1F0C055100DEE3A9 /* WeatherDataView.m in Sources */,
+				E0A48A4F1F0E005C00DEE3A9 /* CityViewController.m in Sources */,
 				E0A48A371F0C053800DEE3A9 /* CityView.m in Sources */,
 				E0A48A281F0A34C200DEE3A9 /* City.m in Sources */,
-				E0339BAA1F0A18E700B0DEAA /* ViewController.m in Sources */,
 				E0339BA71F0A18E700B0DEAA /* AppDelegate.m in Sources */,
 				E0339BA41F0A18E700B0DEAA /* main.m in Sources */,
 				E0A48A2D1F0A380700DEE3A9 /* WeatherData.m in Sources */,
@@ -377,6 +379,7 @@
 				E0A48A2E1F0A380700DEE3A9 /* WeatherData.m in Sources */,
 				E0A48A471F0C058700DEE3A9 /* ForecastSingleDayView.m in Sources */,
 				E0A48A421F0C056F00DEE3A9 /* ForecastView.m in Sources */,
+				E0A48A501F0E005C00DEE3A9 /* CityViewController.m in Sources */,
 				E0A48A331F0A390100DEE3A9 /* ForecastData.m in Sources */,
 				E0339BC01F0A18E700B0DEAA /* StormTests.m in Sources */,
 			);
@@ -392,6 +395,7 @@
 				E0A48A2F1F0A380700DEE3A9 /* WeatherData.m in Sources */,
 				E0A48A481F0C058700DEE3A9 /* ForecastSingleDayView.m in Sources */,
 				E0A48A431F0C056F00DEE3A9 /* ForecastView.m in Sources */,
+				E0A48A511F0E005C00DEE3A9 /* CityViewController.m in Sources */,
 				E0A48A341F0A390100DEE3A9 /* ForecastData.m in Sources */,
 				E0339BCB1F0A18E700B0DEAA /* StormUITests.m in Sources */,
 			);

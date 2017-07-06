@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "City.h"
 #import "CityView.h"
+#import "CityViewController.h"
 #import "ForecastData.h"
 #import "WeatherData.h"
 
@@ -54,13 +55,9 @@
     city.weatherData = weatherData;
     city.forecastData = [self createRandomForecast];
     
-    // Creating the city view
-    CityView *cityView = [[CityView alloc] initWithCity:city];
-    cityView.frame = _window.frame;
-    [_window addSubview:cityView];
-    
     // Override point for customization after application launch.
-    self.window.rootViewController = [[UIViewController alloc] init];
+    CityViewController *cityViewController = [[CityViewController alloc] initWithCity:city];
+    self.window.rootViewController = cityViewController;
     [_window makeKeyAndVisible];
     return YES;
 }
