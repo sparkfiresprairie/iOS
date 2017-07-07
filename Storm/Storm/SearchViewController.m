@@ -82,6 +82,11 @@ const static CGFloat kPadding = 20;
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_delegate searchViewController:self didSelectCityName:_filteredListOfCities[indexPath.row]];
+}
+
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText

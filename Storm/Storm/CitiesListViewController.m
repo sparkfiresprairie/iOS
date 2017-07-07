@@ -10,9 +10,11 @@
 
 #import "ForecastData.h"
 #import "City.h"
+#import "CityViewController.h"
+#import "SearchViewController.h"
 #import "WeatherData.h"
 
-@interface CitiesListViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface CitiesListViewController () <SearchViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -43,12 +45,6 @@
         city.weatherData = weatherData;
         city.forecastData = [self createRandomForecast];
         _cities = @[city];
-        
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.backgroundColor = [UIColor blackColor];
-        [self.view addSubview:_tableView];
     }
     return self;
 }
@@ -57,12 +53,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"Storm";
+    
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(_addCityClicked)];
+    self.navigationItem.rightBarButtonItem = addButtonItem;
+    
+    _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:_tableView];
     self.view.backgroundColor = [UIColor blackColor];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    _tableView.frame = self.view.bounds;
 }
 
 - (void)viewDidLayoutSubviews
 {
-    _tableView.frame = CGRectMake(0, self.topLayoutGuide.length, self.view.bounds.size.width, self.view.bounds.size.height - self.topLayoutGuide.length);
+    [super viewDidLayoutSubviews];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -92,6 +105,26 @@
     return forecastArray;
 }
 
+- (void)_addCityClicked
+{
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+    searchViewController.delegate = self;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
+
+#pragma mark - SearchViewControllerDelegate
+- (void)dismissSearchViewController:(SearchViewController *)viewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)searchViewController:(SearchViewController *)viewController didSelectCityName:(NSString *)cityName
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"%@", cityName);
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -111,6 +144,13 @@
     City *city = _cities[indexPath.row];
     cell.textLabel.text = city.cityName;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CityViewController *cityViewController = [[CityViewController alloc] initWithCity:_cities[indexPath.row]];
+    [self.navigationController pushViewController:cityViewController animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*

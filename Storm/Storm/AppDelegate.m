@@ -18,10 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     CitiesListViewController *citiesListViewController = [[CitiesListViewController alloc] init];
-    _window.rootViewController = citiesListViewController;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:citiesListViewController];
+    
+    _window.rootViewController = navigationController;
     [_window makeKeyAndVisible];
     return YES;
 }
