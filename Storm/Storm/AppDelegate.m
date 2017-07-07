@@ -7,12 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "City.h"
-#import "CityView.h"
-#import "CityViewController.h"
-#import "ForecastData.h"
-#import "SearchViewController.h"
-#import "WeatherData.h"
+
+#import "CitiesListViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,45 +16,12 @@
 
 @implementation AppDelegate
 
-- (NSArray *)createRandomForecast
-{
-    NSMutableArray<ForecastData *> *forecastArray = [[NSMutableArray alloc] init];
-    for (NSInteger i = 0; i < 7; i++) {
-        ForecastData *forecast = [[ForecastData alloc] init];
-        forecast.date = [NSDate dateWithTimeIntervalSince1970:arc4random() % 14000000];
-        forecast.maxDegree = arc4random() % 100;
-        forecast.minDegree = arc4random() % 100;
-        forecast.chancesOfRain = arc4random() % 100;
-        forecast.iconName = @"01d";
-        [forecastArray addObject:forecast];
-    }
-    return forecastArray;
-}
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // creating the city data
-    City *city = [[City alloc] initWithCityId:@"168940" andCityName:@"Menlo Park"];
-    city.latitude = 37.45;
-    city.longitude = -122.18;
-    
-    WeatherData *weatherData = [[WeatherData alloc] init];
-    weatherData.temperature = 15;
-    weatherData.maxDegree = 20;
-    weatherData.minDegree = 8;
-    weatherData.humidity = 69;
-    weatherData.windAngle = 347;
-    weatherData.windSpeed = 1.86;
-    weatherData.shortCondition = @"Clear";
-    weatherData.longCondition = @"Sky is Clear";
-    weatherData.iconName = @"01d";
-    
-    city.weatherData = weatherData;
-    city.forecastData = [self createRandomForecast];
     
     // Override point for customization after application launch.
-    SearchViewController *searchViewController = [[SearchViewController alloc] init];
-    _window.rootViewController = searchViewController;
+    
+    CitiesListViewController *citiesListViewController = [[CitiesListViewController alloc] init];
+    _window.rootViewController = citiesListViewController;
     [_window makeKeyAndVisible];
     return YES;
 }

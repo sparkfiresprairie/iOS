@@ -44,6 +44,9 @@
 		E0A48A541F0E099400DEE3A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A531F0E099400DEE3A9 /* SearchViewController.m */; };
 		E0A48A551F0E099400DEE3A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A531F0E099400DEE3A9 /* SearchViewController.m */; };
 		E0A48A561F0E099400DEE3A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A531F0E099400DEE3A9 /* SearchViewController.m */; };
+		E0A48A591F0F47EE00DEE3A9 /* CitiesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A581F0F47EE00DEE3A9 /* CitiesListViewController.m */; };
+		E0A48A5A1F0F47EE00DEE3A9 /* CitiesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A581F0F47EE00DEE3A9 /* CitiesListViewController.m */; };
+		E0A48A5B1F0F47EE00DEE3A9 /* CitiesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A48A581F0F47EE00DEE3A9 /* CitiesListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,8 @@
 		E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
 		E0A48A521F0E099400DEE3A9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		E0A48A531F0E099400DEE3A9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		E0A48A571F0F47EE00DEE3A9 /* CitiesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesListViewController.h; sourceTree = "<group>"; };
+		E0A48A581F0F47EE00DEE3A9 /* CitiesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +228,8 @@
 				E0A48A4E1F0E005C00DEE3A9 /* CityViewController.m */,
 				E0A48A521F0E099400DEE3A9 /* SearchViewController.h */,
 				E0A48A531F0E099400DEE3A9 /* SearchViewController.m */,
+				E0A48A571F0F47EE00DEE3A9 /* CitiesListViewController.h */,
+				E0A48A581F0F47EE00DEE3A9 /* CitiesListViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -365,6 +372,7 @@
 				E0A48A461F0C058700DEE3A9 /* ForecastSingleDayView.m in Sources */,
 				E0A48A321F0A390100DEE3A9 /* ForecastData.m in Sources */,
 				E0A48A3C1F0C055100DEE3A9 /* WeatherDataView.m in Sources */,
+				E0A48A591F0F47EE00DEE3A9 /* CitiesListViewController.m in Sources */,
 				E0A48A4F1F0E005C00DEE3A9 /* CityViewController.m in Sources */,
 				E0A48A371F0C053800DEE3A9 /* CityView.m in Sources */,
 				E0A48A281F0A34C200DEE3A9 /* City.m in Sources */,
@@ -382,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A48A291F0A34C200DEE3A9 /* City.m in Sources */,
+				E0A48A5A1F0F47EE00DEE3A9 /* CitiesListViewController.m in Sources */,
 				E0A48A3D1F0C055100DEE3A9 /* WeatherDataView.m in Sources */,
 				E0A48A551F0E099400DEE3A9 /* SearchViewController.m in Sources */,
 				E0A48A381F0C053800DEE3A9 /* CityView.m in Sources */,
@@ -399,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A48A2A1F0A34C200DEE3A9 /* City.m in Sources */,
+				E0A48A5B1F0F47EE00DEE3A9 /* CitiesListViewController.m in Sources */,
 				E0A48A3E1F0C055100DEE3A9 /* WeatherDataView.m in Sources */,
 				E0A48A561F0E099400DEE3A9 /* SearchViewController.m in Sources */,
 				E0A48A391F0C053800DEE3A9 /* CityView.m in Sources */,
